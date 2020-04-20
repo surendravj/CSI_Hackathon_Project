@@ -1,0 +1,89 @@
+<%-include('layouts/header.ejs')-%>
+<div class="container my-5 z-depth-1">
+
+
+    <!--Section: Content-->
+    <section class="dark-grey-text p-5">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-5 mb-4 mb-md-0">
+
+                <div class="view">
+                    <img src="https://mdbootstrap.com/img/illustrations/undraw_Group_chat_unwm.svg" class="img-fluid"
+                        alt="smaple image">
+                </div>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-7 mb-lg-0 mb-4">
+
+                <!-- Material form subscription -->
+                <div class="alert-warning row-md-5 text-center">
+                    <%if(error!=''){%>
+                    <p style="padding:10px;"><%=error%></p>
+                    <%}%>
+                </div>
+                <div class="alert-success row-md-5 text-center">
+                    <%if(success!=''){%>
+                    <p style="padding:10px;"><%=success%></p>
+                    <%}%>
+                </div>
+
+                <h5 class="card-header info-color white-text text-center py-4">
+                    <strong>Login here</strong>
+                </h5>
+
+                <!--Card content-->
+                <div class="card-body px-lg-5">
+
+                    <!-- Form -->
+                    <form class="text-center" method="POST" style="color: #757575;" action="/signin">
+
+
+                        <!-- Name -->
+                        <div class="md-form mt-3">
+                            <input type="email" name="email" id="materialSubscriptionFormPasswords" class="form-control">
+                            <label for="materialSubscriptionFormPasswords">Email</label>
+                        </div>
+
+                        <!-- E-mai -->
+                        <div class="md-form">
+                            <input type="password" name="password" id="materialSubscriptionFormEmail" class="form-control">
+                            <label for="materialSubscriptionFormEmail">password</label>
+                        </div>
+
+
+                        <!-- Sign in button -->
+                        <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect"
+                            type="submit">Sign in</button>
+                        <p>Not a member?
+                            <a href="/signup">Register</a>
+                        </p>
+
+                    </form>
+                    <!-- Form -->
+
+                </div>
+
+            </div>
+            <!-- Material form subscription -->
+
+        </div>
+        <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+</section>
+<!--Section: Content-->
+
+
+</div>
+
+
+<%-include('layouts/footer.ejs')-%>

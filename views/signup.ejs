@@ -1,0 +1,69 @@
+<%-include('layouts/header.ejs')-%>
+
+<div class="container my-4 py-5 z-depth-1">
+
+
+    <!--Section: Content-->
+    <section class="px-md-3 mx-md-3 text-center text-lg-left dark-grey-text">
+
+
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="alert-warning row-md-5 text-center">
+                    <%if(error!=''){%>
+                    <p style="padding:10px;"><%=error%></p>
+                    <%}%>
+                </div>
+
+                <!-- Default form login -->
+                <form class="text-center" method="POST" action="/signup">
+
+                    <p class="h4 mb-4">Register here </p>
+
+                    <input type="text" name="name" id="defaultLoginFormEmail" class="form-control mb-4"
+                        placeholder="Your name">
+
+
+                    <!-- Email -->
+                    <input type="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4"
+                        placeholder="Your email">
+
+                    <!-- Password -->
+                    <input type="password" name="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                        placeholder="Your password">
+                    <!-- Default switch -->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" name="isTutor" value="true" class="custom-control-input"
+                            id="customSwitches">
+                        <label class="custom-control-label" for="customSwitches">I want to be a tutor</label>
+                    </div>
+
+                    <!-- Sign in button -->
+                    <button class="btn btn-info btn-block my-4" type="submit">Register</button>
+
+                    <!-- Register -->
+                    <p>Have Account?
+                        <a href="/signin">Login</a>
+                    </p>
+
+
+                </form>
+                <!-- Default form login -->
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
+<%-include('layouts/footer.ejs')-%>
