@@ -11,7 +11,7 @@ module.exports = (passport) => {
                 .then(data => {
                     if (data) {
                         if (password == data.password) 
-                        {   console.log(data);
+                        {  
                             return done(null, data);
                         }
                         else {

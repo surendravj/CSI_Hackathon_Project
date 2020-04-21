@@ -10,8 +10,9 @@ const app = express();
 
 
 //modules importing
-const signup = require('./routes/public/auth');
+const auth = require('./routes/public/auth');
 require('./auth/authentication')(passport);
+const dashboard = require('./routes/private/dashboard');
 const mongoUrl = 'mongodb+srv://surendra:surendra14@cluster0-m7gbl.mongodb.net/LMS?retryWrites=true&w=majority'
 
 
@@ -44,8 +45,8 @@ app.use('/static', express.static(path.join(__dirname, '/public')));
 
 // routings
 app.get('/', (req, res) => res.render('index'));
-app.use(signup);
-
+app.use(auth);
+app.use(dashboard);
 
 
 

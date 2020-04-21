@@ -6,7 +6,7 @@ module.exports = {
         }
         else {
             req.flash('error', 'Please Login To Access That Resource');
-            res.redirect('/login');
+            res.redirect('/signin');
         }
     }
 }
