@@ -19,7 +19,12 @@ router.get('/user/books', ensureAuthenticated, (req, res) => {
     renderData = {
         name: req.user.name,
     }
-    res.render('books',renderData);
+    res.render('books', renderData);
 });
+
+
+router.get('/courses', (req, res) => {
+    res.render('courses');
+})
 
 module.exports = router;
