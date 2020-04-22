@@ -1,42 +1,176 @@
 <%-include('layouts/header.ejs')-%>
 <!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark" style="background-color:black;opacity:0.9;">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-        aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-            <p class="text-dark mt-2"><%=name%></p>
-            <li class="nav-item avatar dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0"
-                        alt="avatar image" style="height:30px;width:30px;">
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
-                    aria-labelledby="navbarDropdownMenuLink-55">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+<%-include('layouts/navbar.ejs')-%>
+
+
+<div class="container my-1">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 mx-auto">
+
+
+            <!-- Section: Block Content -->
+            <section>
+
+                <div class="list-group list-group-flush z-depth-1 rounded">
+                    <div class="list-group-item active d-flex justify-content-start align-items-center py-3"
+                        style="background-color: black;opacity:0.8;">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%289%29.jpg"
+                            class="rounded-circle z-depth-0" width="50" alt="avatar image">
+                        <div class="d-flex flex-column pl-3">
+                            <p class="font-weight-normal mb-0"><%=name%></p>
+                            <p class="small mb-0">Tutor</p>
+                        </div>
+                    </div>
+                    <a href="#!"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center "
+                        style="font-weight: bold;">My Courses
+                        <span class="badge badge-secondary badge-pill">5</span>
+                    </a>
+                    <a href="#!"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                        style="font-weight: bold;">Rating
+                        <span class="badge badge-warning badge-pill">4</span>
+                    </a>
+                    <a href="#!"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                        style="font-weight: bold;">
+                        Students Enrolled
+                        <span class="badge badge-success badge-pill">10</span>
+                    </a>
+                    <a href="#!"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                        style="font-weight: bold;">Followers
+                        <span class="badge badge-danger badge-pill">10</span>
+                    </a>
                 </div>
-            </li>
-        </ul>
+
+            </section>
+            <!-- Section: Block Content -->
+
+
+        </div>
     </div>
-</nav>
+</div>
 <!--/.Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- reviews -->
+
+
+
+
+<div class="container my-5 py-5 px-md-5 z-depth-1">
+
+
+    <!--Section: Content-->
+    <section class="text-center text-lg-left dark-grey-text">
+
+        <div class="text-center font-weight-bold">Discussions</div>
+
+        <div class="media d-block d-md-flex mt-4">
+            <img class="card-img-64 rounded z-depth-1 d-flex mx-auto mb-3"
+                src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg" alt="Generic placeholder image">
+            <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                <p class="font-weight-bold my-0">
+                    Miley Steward
+                    <a href="" class="pull-right ml-1">
+                        <i class="fas fa-reply"></i>
+                    </a>
+                </p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum error assumenda nam repudiandae
+                temporibus culpa, nostrum provident blanditiis veritatis rerum vitae corrupti odit enim cupiditate
+                consequatur autem voluptatum ratione earum.
+                <div class="media d-block d-md-flex mt-4">
+                    <img class="card-img-64 rounded z-depth-1 d-flex mx-auto mb-3"
+                        src="https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg" alt="Generic placeholder image">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                        <p class="font-weight-bold my-0">
+                            Tommy Smith
+                            <a href="" class="pull-right ml-1">
+                                <i class="fas fa-reply"></i>
+                            </a>
+                        </p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum quo perspiciatis, quam mollitia
+                        eum maxime commodi labore sed exercitationem quasi dignissimos minus aliquid magni autem
+                        voluptatum praesentium, quae quod!
+                    </div>
+                </div>
+
+                <!-- Quick Reply -->
+                <div class="form-group mt-4">
+                    <label for="quickReplyFormComment">Your Word</label>
+                    <textarea class="form-control" id="quickReplyFormComment" rows="5"></textarea>
+
+                    <div class="text-center my-4">
+                        <button class="btn btn-info btn-sm" type="submit">Post</button>
+                    </div>
+                </div>
+
+                <div class="media d-block d-md-flex mt-3">
+                    <img class="card-img-64 rounded z-depth-1 d-flex mx-auto mb-3"
+                        src="https://mdbootstrap.com/img/Photos/Avatars/img (21).jpg" alt="Generic placeholder image">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                        <p class="font-weight-bold my-0">
+                            Sylvester the Cat
+                            <a href="" class="pull-right ml-1">
+                                <i class="fas fa-reply"></i>
+                            </a>
+                        </p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quibusdam cumque expedita
+                        aliquam quaerat labore veritatis nisi optio ullam iusto, quis corrupti eveniet, vel iste
+                        consequuntur omnis. Ipsa, eius assumenda.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="media d-block d-md-flex mt-3">
+            <img class="card-img-64 rounded z-depth-1 d-flex mx-auto mb-3"
+                src="https://mdbootstrap.com/img/Photos/Avatars/img (30).jpg" alt="Generic placeholder image">
+            <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                <p class="font-weight-bold my-0">
+                    Caroline Horwitz
+                    <a href="" class="pull-right ml-1">
+                        <i class="fas fa-reply"></i>
+                    </a>
+                </p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eum ipsa fuga at eaque iusto ad sit,
+                aliquid ipsum nam, vel dolorem non. Quis, molestiae ipsam sit explicabo ipsum suscipit.
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
+
+
+
+
+
+<!--Footer-->
+<footer class="page-footer text-center  font-small mt-4 wow fadeIn">
+
+
+    <hr class="my-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3" style="background-color:black;opacity:0.8;">
+        © 2018 Copyright:
+        <a href="" target="_blank"> TeXplorer.com </a>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
 <%-include('layouts/footer.ejs')-%>
